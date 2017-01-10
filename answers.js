@@ -82,3 +82,18 @@ console.log( basicMath(1, 4.678, "add") );
 console.log( basicMath(1, 4.678, "subtract") );
 console.log( basicMath(1, 4, "div") );
 console.log( basicMath(1, 4.678, "pizzaburger") );
+
+//function repeats the string however many number of times you specify
+function repeatWord (word, number) {
+    var output = "";
+    
+    for (var i = 1; i <= number; i++) {
+        output = output + word + "\n";
+    }
+    
+    return output;
+}
+
+console.log("\nREPEAT function: ");
+console.log( repeatWord("dog", 2) );
+console.log( repeatWord("tunnup", 16) );
