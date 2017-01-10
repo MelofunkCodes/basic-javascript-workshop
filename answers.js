@@ -176,3 +176,27 @@ console.log("\nReversed String Function: ");
 console.log( reverseString("cat") );
 console.log( reverseString("helicopter and car chases!") );
 console.log( reverseString(" ") );
+
+//factorial function
+function factorial (number) {
+    var product = number;
+    
+    if (number === 0) {
+        product = 1;
+    }
+    else if (number < 0) {
+        product = "can't compute negative integers!";
+    }
+    else {
+        for (var i = number; i >= 2; i--) {
+            product = product *(i-1);
+        }
+    }
+    
+    return product;
+}
+
+console.log("\nFactorial Function: ");
+console.log( factorial(5) );
+console.log( factorial(12) );
+console.log( factorial(-3) );
