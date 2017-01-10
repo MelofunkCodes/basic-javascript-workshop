@@ -200,3 +200,24 @@ console.log("\nFactorial Function: ");
 console.log( factorial(5) );
 console.log( factorial(12) );
 console.log( factorial(-3) );
+
+//function finds the longest word in a phrase
+function longestWord (phrase) {
+    var splitPhrase = phrase.split(" ");
+    
+    var word = "";
+    var longest = 0;
+    
+    for(var i = 0; i < splitPhrase.length; i++) {
+        if(longest < splitPhrase[i].length) {
+            longest = splitPhrase[i].length;
+            word = splitPhrase[i];
+        }
+    }
+    
+    return word;
+}
+
+console.log("\nLongest Word Function: ");
+console.log ( longestWord("television is lit these days") );
+console.log ( longestWord("zebra ate pizza") );
