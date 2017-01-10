@@ -88,6 +88,8 @@ function repeatWord (word, number) {
     var output = "";
     
     for (var i = 1; i <= number; i++) {
+        
+        //Mathieu recommends using this syntax versus output += word as it's for a string versus number. The += will work 99.9% of the time, but there will be cases where it doesn't.
         output = output + word + "\n";
     }
     
@@ -159,3 +161,18 @@ function oneToTenMeta() {
 
 console.log("\nPrint 1 to 10 function (in meta form): ");
 oneToTenMeta();
+
+//function reverses string
+function reverseString (word) {
+    var reversedWord = "";
+    for(var i = word.length - 1 ; i >= 0; i--) {
+        reversedWord = reversedWord + word[i];
+    }
+    
+    return reversedWord;
+}
+
+console.log("\nReversed String Function: ");
+console.log( reverseString("cat") );
+console.log( reverseString("helicopter and car chases!") );
+console.log( reverseString(" ") );
