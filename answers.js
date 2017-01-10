@@ -18,3 +18,18 @@ console.log("LAST CHARACTER FUNCTION: ");
 console.log( lastCharacter("Mr. Bean") );
 console.log( lastCharacter("Mexico") );
 console.log( lastCharacter("Crunchy chips ") );
+
+//function that takes a string and a number, and returns the character at the position represented by the number
+function charPosition(word, number) {
+    if (number <= word.length) {
+        return word[number-1];
+    }
+    else {
+        return "There are not that many characters in your string. Try another number!";
+    }
+}
+
+console.log("CHARACTER POSITION FUNCTION: ");
+console.log( charPosition("elephant", 20) );
+console.log( charPosition("cruising", 6) );
+console.log( charPosition(" ", 1) );
