@@ -56,3 +56,29 @@ console.log( multiply(23462346236, 0.00001) );
 console.log( multiply("GitHub", 3.14) ); //outputs NaN
 console.log( multiply( firstCharacter("cat"), 1) ); //outputs NaN
 
+
+//function will add, subtract, multiply, or divide two numbers depending on what user or function orders it to do
+function basicMath (num1, num2, command) {
+    if (command === "add") {
+        return num1 + num2;
+    }
+    else if (command === "subtract") {
+        return num1 - num2;
+    }
+    else if (command === "mult") {
+        return num1 * num2;
+    }
+    else if (command === "div") {
+        return num1 / num2;
+    }
+    else {
+        return 0; 
+    }
+}
+
+console.log("\nMATH function: ");
+console.log( basicMath(1, 4.678, "mult") );
+console.log( basicMath(1, 4.678, "add") );
+console.log( basicMath(1, 4.678, "subtract") );
+console.log( basicMath(1, 4, "div") );
+console.log( basicMath(1, 4.678, "pizzaburger") );
