@@ -147,3 +147,15 @@ function oneToTenWords() {
 
 console.log("\nPrint 1 to 10 function (in word form): ");
 oneToTenWords();
+
+//function that prints out numbers 1 to 10 inclusively, but depending on the number, will print it out that number of times
+function oneToTenMeta() {
+    for (var i = 1; i <= 10; i++) {
+        for (var j = 1; j <= i; j++) {
+            console.log(i);
+        }
+    }
+}
+
+console.log("\nPrint 1 to 10 function (in meta form): ");
+oneToTenMeta();
