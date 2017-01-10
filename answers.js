@@ -33,3 +33,26 @@ console.log("CHARACTER POSITION FUNCTION: ");
 console.log( charPosition("elephant", 20) );
 console.log( charPosition("cruising", 6) );
 console.log( charPosition(" ", 1) );
+
+//function adds two numbers
+function add(num1, num2) {
+    return num1 + num2;
+}
+
+console.log("ADDING FUNCTION: ");
+console.log( add(3, 4) );
+console.log( add(23462346236, 0.00001) );
+console.log( add("GitHub", 3.14) ); //combines the string with the number
+console.log( add( firstCharacter("cat"), 1) + "\n"); //combines output of firstCharacter function with number
+
+//function multiplies two numbers
+function multiply(num1, num2) {
+    return num1 * num2;
+}
+
+console.log("MULTIPLYING FUNCTION: ");
+console.log( multiply(3, 4) );
+console.log( multiply(23462346236, 0.00001) );
+console.log( multiply("GitHub", 3.14) ); //outputs NaN
+console.log( multiply( firstCharacter("cat"), 1) ); //outputs NaN
+
