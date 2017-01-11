@@ -221,3 +221,27 @@ function longestWord (phrase) {
 console.log("\nLongest Word Function: ");
 console.log ( longestWord("television is lit these days") );
 console.log ( longestWord("zebra ate pizza") );
+console.log ( longestWord("Marie Poppins is supercalifragilisticexpialadocious") );
+
+//function will output "Hello World" proper! 
+function capitalize (phrase) {
+    phrase = phrase.toLowerCase().split(" ");
+
+    
+    for (var i = 0; i < phrase.length; i++) {
+        //taking each word in each array position, splitting each word into separate letters, Upper Casing first letter of each word, and joining back the letters again into their words
+        phrase[i] = phrase[i].split("");
+        phrase[i][0] = phrase[i][0].toUpperCase();
+        phrase[i] = phrase[i].join("");
+    }
+    
+    //joining up all the words split up in phrase
+    var capPhrase = phrase.join(" ");
+
+    return capPhrase;
+}
+
+console.log("\nCapitalize first letter function: ");
+console.log( capitalize("HeLLO wOrLd") );
+console.log( capitalize("ThE DOG jumped oVeR tHE mooN") );
+console.log( capitalize("theSE CHALLENGES arE harRRRRRd") );
