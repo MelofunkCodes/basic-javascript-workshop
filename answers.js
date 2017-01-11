@@ -245,3 +245,21 @@ console.log("\nCapitalize first letter function: ");
 console.log( capitalize("HeLLO wOrLd") );
 console.log( capitalize("ThE DOG jumped oVeR tHE mooN") );
 console.log( capitalize("theSE CHALLENGES arE harRRRRRd") );
+
+//function takes an array and returns largest number of the array
+
+function largestNumber (numArray) {
+    var largest = -Number.MAX_SAFE_INTEGER;
+    
+    for(var i = 0; i < numArray.length; i++) {
+        if(largest < numArray[i]) {
+            largest = numArray[i];
+        }
+    }
+    
+    return largest;
+}
+
+console.log("\nLargest number in array function: ");
+console.log( largestNumber( [1, 45, 55545, -3, 3, 0] ) );
+console.log( largestNumber( [-55, -400, -2.99, -0.11] ) );
