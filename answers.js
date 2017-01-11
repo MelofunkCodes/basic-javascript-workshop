@@ -305,3 +305,19 @@ console.log("\nTruthy filter function: ");
 console.log(newArray);
 console.log(newArray2);
 //--END SECOND METHOD OF FILTERING ARRAY USING FILTER
+
+
+//function returns sum of all numbers in array
+function sumArray (a) {
+    var sum = 0;
+    
+    for (var i = 0; i< a.length; i++) {
+        sum += a[i];
+    }
+    
+    return sum;
+}
+
+console.log("\nSum of all numbers in array function: ");
+console.log( sumArray( [1, 2, 3, 4, 5] ) );
+console.log( sumArray( [3333, true, false, 0.0001, 0.99, -1]) );
