@@ -263,3 +263,45 @@ function largestNumber (numArray) {
 console.log("\nLargest number in array function: ");
 console.log( largestNumber( [1, 45, 55545, -3, 3, 0] ) );
 console.log( largestNumber( [-55, -400, -2.99, -0.11] ) );
+
+//function filters all values in array and eliminates all values that are falsy (i.e. "false", 0, null, undefined, NaN)
+
+//FIRST METHOD WITHOUT USING FILTER (IGNORE)
+/*function truthyArray (a) {
+    var filteredArray = [];
+    var counter = 0;
+    
+    for (var i = 0; i < a.length; i++) {
+        if (Boolean(a[i])) {
+            
+            //if value of array "a" at index "i" is a truthy value, it will put truthy value into filteredArray and increase counter for next truthy value found
+            filteredArray[counter] = a[i];
+            counter++;
+        }
+    }
+    
+    return filteredArray;
+    
+}
+
+console.log("\nFiltered truthy array function: ");
+console.log( truthyArray( [1, "dog", false, true, 0, 99] ) );
+console.log( truthyArray( [NaN, "dog", 3.14, undefined, null, "cat ate pizza", 1, "", firstCharacter("zebra")] ) ); */
+
+//SECOND METHOD OF FILTERING ARRAY USING FILTER
+var a = [ NaN, "dog", 3.14, undefined, null, "cat ate pizza", 1, "", firstCharacter("zebra")];
+var b = [1, "elephant", false, true, 0, 99];
+
+function isTruthy (a) {
+    return Boolean(a) == true;
+}
+
+//var newArray = a.filter(Boolean); //Can also do like this
+var newArray = a.filter(isTruthy);
+var newArray2 = b.filter(isTruthy);
+
+//testing if function works
+console.log("\nTruthy filter function: ");
+console.log(newArray);
+console.log(newArray2);
+//--END SECOND METHOD OF FILTERING ARRAY USING FILTER
