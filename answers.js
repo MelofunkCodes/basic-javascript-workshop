@@ -266,7 +266,7 @@ console.log( largestNumber( [-55, -400, -2.99, -0.11] ) );
 
 //function filters all values in array and eliminates all values that are falsy (i.e. "false", 0, null, undefined, NaN)
 
-//FIRST METHOD WITHOUT USING FILTER (IGNORE)
+//--FIRST METHOD WITHOUT USING FILTER (IGNORE)
 /*function truthyArray (a) {
     var filteredArray = [];
     var counter = 0;
@@ -288,7 +288,7 @@ console.log("\nFiltered truthy array function: ");
 console.log( truthyArray( [1, "dog", false, true, 0, 99] ) );
 console.log( truthyArray( [NaN, "dog", 3.14, undefined, null, "cat ate pizza", 1, "", firstCharacter("zebra")] ) ); */
 
-//SECOND METHOD OF FILTERING ARRAY USING FILTER
+//--SECOND METHOD OF FILTERING ARRAY USING FILTER
 var a = [ NaN, "dog", 3.14, undefined, null, "cat ate pizza", 1, "", firstCharacter("zebra")];
 var b = [1, "elephant", false, true, 0, 99];
 
@@ -321,3 +321,47 @@ function sumArray (a) {
 console.log("\nSum of all numbers in array function: ");
 console.log( sumArray( [1, 2, 3, 4, 5] ) );
 console.log( sumArray( [3333, true, false, 0.0001, 0.99, -1]) );
+
+//function takes two arrays and returns array of all elements in only ONE array
+function unique (arr1, arr2) {
+    var uniqueArr = [];
+    
+    //looking at first array
+    arr1.forEach( function(eachItem){
+        //if current Number of array 1 does not exist in array 2, push it into the unique array
+        if( arr2.indexOf(eachItem) === -1){
+            uniqueArr.push(eachItem);
+        }
+    });
+    
+    //looking at second array
+    arr2.forEach( function(eachItem){
+        //if current number of array 2 does not exist in array 1, push it into unique array
+        if( arr1.indexOf(eachItem) === -1){
+            uniqueArr.push(eachItem);
+        }
+    });
+    
+    return uniqueArr;
+}
+
+console.log("\nEXERCISE 18: ");
+console.log("Unique array: ", unique([1, 2, 3], [1, 2, 4, 5]) );
+
+//MINI CHALLENGE
+function isDog(item){
+    return item === "dog";
+}
+
+function mapArray (arr, isDog){
+    var newArr = [];
+    
+    for (var i = 0; i < arr.length; i++){
+        newArr.push( isDog( arr[i] ) );
+    }
+    
+    return newArr;
+}
+
+console.log("\nMini Challenge: ");
+console.log("Mapped array: ", mapArray(["dog", "cat", "bird", "dog", "mosquito"], isDog) );
